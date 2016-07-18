@@ -2,7 +2,6 @@ var isPrimal;
 var primals = [];
 var maxNumber = 10001;
 
-
 for (var i = 2; true; i++) {
 	isPrimal = true;
 
