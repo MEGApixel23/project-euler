@@ -1,13 +1,14 @@
 var currentNumber;
-var maxNumber = 13;
+var maxNumber = 1000 * 1000;
 var sequence = [];
-var prevSequence = [];
+var longestSequenceLength = 0;
+var neededNumber = 0;
 
 function nextNumber(number) {
 	return (number % 2 === 0) ? (number / 2) : (3 * number + 1);
 }
 
-for (var i = maxNumber; i >= 0; i--) {
+for (var i = maxNumber; i > 1; i--) {
 	sequence = [];
 	currentNumber = i;
 
@@ -21,7 +22,10 @@ for (var i = maxNumber; i >= 0; i--) {
 			break;
 	}
 
-	break;
+	if (sequence.length > longestSequenceLength) {
+		longestSequenceLength = sequence.length;
+		neededNumber = i;
+	}
 }
 
-console.log(sequence);
+console.log(neededNumber);
