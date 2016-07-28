@@ -11,6 +11,6 @@ function factorial(number) {
 }
 
 var items = gridSIze + gridSIze;
-var combinations = factorial(items);
+var combinations = factorial(items - 1);
 
 console.log(combinations);
