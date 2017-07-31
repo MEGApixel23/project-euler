@@ -1,16 +1,11 @@
-var gridSIze = 20;
-
-function factorial(number) {
-	var result = 1;
-
-	for (var i = 1; i <= number; i++) {
-		result *= i;
+const factorial = (number) => {
+	let fac = 1;
+	for (let i = 1; i <= number; i++) {
+		fac *= i;
 	}
 
-	return result;
-}
+	return fac;
+};
+const count = (gridSize) => (factorial(gridSize * 2) / (factorial(gridSize) ** 2));
 
-var items = gridSIze + gridSIze;
-var combinations = factorial(items - 1);
-
-console.log(combinations);
+console.log(count(20))
